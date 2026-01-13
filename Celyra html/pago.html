@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Celyra · Pedido</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="stylespagos.css">
+
+</head>
+
+<body>
+
+<div class="container-box">
+
+  <h2 class="text-center mb-3">Confirma tu pedido</h2>
+  <p class="text-center mb-4">
+    Al enviar tu pedido, nos pondremos en contacto contigo para finalizar el pago de forma segura.
+  </p>
+
+  <!-- PRODUCTOS -->
+  <div class="d-flex justify-content-between product-select mb-4">
+    <button id="btnHoja">Hoja (6 piezas)</button>
+    <button id="btnTonico">Tónico</button>
+    <button id="btnBundle">Bundle</button>
+  </div>
+
+  <!-- RESUMEN -->
+  <h4>Resumen del pedido</h4>
+  <p><strong>Producto:</strong> <span id="producto">Hoja (6 piezas)</span></p>
+  <p><strong>Precio:</strong> $<span id="precio">220</span> MXN</p>
+
+  <!-- DATOS -->
+  <h5 class="mt-4">Tus datos</h5>
+  <input class="form-control mb-3" id="nombre" placeholder="Nombre completo">
+  <input class="form-control mb-3" id="correo" placeholder="Correo electrónico">
+
+  <!-- BOTÓN -->
+  <button class="btn-main" onclick="enviarPedido()">
+    Enviar pedido
+  </button>
+
+  <p class="note">
+    No solicitamos datos bancarios ni tarjetas.<br>
+    El pago se coordina directamente por correo.<br>
+<br>
+    Aviso de privacidad<br>
+    Celyra es responsable del uso y protección de tus datos personales.<br>
+    Los datos que recabamos serán utilizados únicamente para dar seguimiento a tu pedido y brindarte<br>
+    atención relacionada con nuestros productos.<br>
+    Tus datos no serán compartidos con terceros y serán tratados de conformidad con los principios establecidos en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+  </p>
+
+</div>
+
+<script>
+const precios = {
+  hoja: 220,
+  tonico: 250,
+  bundle: 500
+};
+
+let productoActual = "hoja";
+
+const btnHoja = document.getElementById("btnHoja");
+const btnTonico = document.getElementById("btnTonico");
+const btnBundle = document.getElementById("btnBundle");
+
+function activar(boton) {
+  [btnHoja, btnTonico, btnBundle].forEach(b => b.classList.remove("active"));
+  boton.classList.add("active");
+}
+
+btnHoja.onclick = () => {
+  activar(btnHoja);
+  producto.innerText = "Hoja (6 piezas)";
+  precio.innerText = precios.hoja;
+};
+
+btnTonico.onclick = () => {
+  activar(btnTonico);
+  producto.innerText = "Tónico";
+  precio.innerText = precios.tonico;
+};
+
+btnBundle.onclick = () => {
+  activar(btnBundle);
+  producto.innerText = "Bundle";
+  precio.innerText = precios.bundle;
+};
+
+activar(btnHoja);
+
+function enviarPedido() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const correo = document.getElementById("correo").value.trim();
+
+  if (!nombre || !correo) {
+    alert("Por favor completa tu nombre y correo.");
+    return;
+  }
+
+  const mail = "celyra.skin@gmail.com";
+  const asunto = encodeURIComponent("Nuevo pedido · Celyra");
+  const cuerpo = encodeURIComponent(
+`Hola Celyra 
+
+Quiero realizar el siguiente pedido:
+
+Producto: ${producto.innerText}
+Precio: $${precio.innerText} MXN
+
+Nombre: ${nombre}
+Correo: ${correo}
+
+Quedo atenta/o para continuar con el pago.
+Gracias `
+  );
+
+  window.location.href = `mailto:${mail}?subject=${asunto}&body=${cuerpo}`;
+}
+</script>
+
+</body>
+</html>

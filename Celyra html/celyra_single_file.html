@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Celyra · Ciencia estructural para la piel</title>
+
+  <!-- Tipografía Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<script src="https://js.stripe.com/v3"></script>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md px-4 py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Celyra Logo">
+        <span class="ms-2 fw-bold" style="font-size:1.5rem;color:var(--celyra-text-dark);">CELYRA</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#patch">Patch</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tonico">Tónico</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bundle">Bundle</a></li>
+          <li class="nav-item ms-2"><a class="btn btn-green" href="#comprar">Comprar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero text-center">
+    <div class="container">
+      <img src="1.png" class="logo-big" alt="Celyra logo">
+      <h1 class="display-5 fw-bold"> Ciencia estructural para la piel</h1>
+      <p class="lead mb-4">Patch + Balance - Un ritual creado desde la biotecnología para cuidar, calmar e hidratar.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a class="btn btn-green btn-lg" href="pago.html">Comprar ritual</a>
+        <a class="btn btn-green-outline btn-lg" href="#hoja">Cómo funciona</a>
+</div>
+
+    </div>
+  </header>
+
+  <!-- HOJA -->
+<section id="hoja" class="container py-5 product">
+  <div class="row g-5 align-items-center">
+
+    <div class="col-lg-6 reveal">
+      <h1>Patch – Celulosa vegetal estructural</h1>
+      <p>Un biomaterial biodegradable diseñado para adaptarse al rostro.</p>
+
+      <ul>
+        <li>Mantiene la hidratación y favorece el equilibrio cutáneo</li>
+        <li>Acompaña los procesos naturales de renovación</li>
+        <li>Soporte físico de la barrera cutánea</li>
+        <li>Biodegradable y limpio</li>
+      </ul>
+
+      <button class="btn btn-green">Comprar Patch</button>
+    </div>
+
+    <!--  ESTA ES LA CLAVE -->
+    <div class="col-lg-6 product-images">
+      <img src="Patch 1.png" alt="Patch en lata">
+      <img src="Patch 2.png" alt="Patch hoja">
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- TONICO -->
+<section id="tonico" class="bg-body-tertiary py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+
+      <!-- IMÁGENES -->
+      <div class="col-lg-6 order-lg-2 reveal">
+        <div class="product-images">
+          <img src="Tonico 1.png" alt="Tónico Celyra botella">
+          <img src="Tonico 2.png" alt="Tónico Celyra textura">
+        </div>
+      </div>
+
+      <!-- TEXTO -->
+      <div class="col-lg-6 order-lg-1 reveal">
+        <h2 class="fw-bold display-6">Balance – Tónico Bifásico Hidratante</h2>
+        <p class="text-muted">
+          Tónico diseñado para calmar e hidratar la piel, favoreciendo su equilibrio natural y la función de la barrera.
+        </p>
+        <ul>
+          <li>Hidratación profunda</li>
+          <li>Para pieles sensibles</li>
+          <li>Refuerza la barrera cutánea</li>
+        </ul>
+        <a href="#comprar" class="btn btn-green">Comprar tónico</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- BUNDLE -->
+  <section id="bundle" class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 reveal">
+        <h2 class="fw-bold display-6">Ritual - Patch + Balance - Sistema de cuidado estructural</h2>
+        <p class="text-muted">Un ritual biotecnológico que acompaña la piel en su equilibrio natural. Diseño aplicado al cuidado diario.</p>
+        <ul>
+          <li>Piel equilibrada y funcionalmente estable</li>
+          <li>Piel con mejor respuesta al entorno</li>
+          <li>Para todo tipo de pieles</li>
+        </ul>
+        <a href="#comprar" class="btn btn-green mt-2">Comprar bundle</a>
+      </div>
+      <!-- IMÁGENES -->
+      <div class="col-lg-6 order-lg-2 reveal">
+        <div class="product-images">
+          <img src="Duo 1.png" alt="Ritual Celyra ">
+          <img src="Duo 2.png" alt="Ritual Celyra juntos">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO USAR -->
+  <section class="container py-5">
+    <div class="text-center mb-4 reveal">
+      <h3 class="fw-bold">Cómo usar</h3>
+      <p class="text-muted">Tres pasos sencillos para integrar Celyra en tu rutina.</p>
+    </div>
+    <div class="row g-4 steps">
+      <div class="col-md-4 reveal">
+        <div class="p-4 product-card h-100">
+          <h5 class="fw-semibold">1. Limpiar</h5>
+          <p class="small text-muted">Limpia tu rostro y prepara la piel.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="p-4 product-card h-100">
+          <h5 class="fw-semibold">2. Aplicar tónico</h5>
+          <p class="small text-muted">Humecta ligeramente con el tónico para mejorar la absorción.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="p-4 product-card h-100">
+          <h5 class="fw-semibold">3. Colocar el Patch</h5>
+          <p class="small text-muted">Aplica el patch en la zona deseada y deja actuar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="bg-body-tertiary py-5">
+    <div class="container">
+      <div class="text-center mb-4 reveal">
+        <h3 class="fw-bold">Testimonios</h3>
+        <p class="text-muted">Lo que dicen las personas que ya usaron Celyra.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="p-4 product-card h-100">
+            <div class="quote">"Mi piel se siente más suave y menos inflamada. Me encanta la sensación natural."</div>
+            <div class="mt-3 small text-muted">— Ana M.</div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="p-4 product-card h-100">
+            <div class="quote">"El bundle me ayudó a la irritación. Noté menos rojez en dos semanas."</div>
+            <div class="mt-3 small text-muted">— Lorena P.</div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="p-4 product-card h-100">
+            <div class="quote">"Note mejoras increíbles en líneas finas y parches irritados."</div>
+            <div class="mt-3 small text-muted">— María R.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPRAR -->
+  <section id="comprar" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 reveal">Elige tu ritual</h2>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="p-4 product-card bg-white text-dark rounded h-100">
+            <h5 class="fw-bold">Patch</h5>
+            <p class="small text-muted">Celulosa Estructural Vegetal.</p>
+            <div class="d-flex justify-content-center gap-3">
+              <a class="btn btn-green btn-lg" href="pago.html">Comprar Patch</a>
+</div>
+
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="p-4 product-card bg-white text-dark rounded h-100">
+            <h5 class="fw-bold">Balance</h5>
+            <p class="small text-muted">Tónico Bifásico Hidratante.</p>
+            <div class="d-flex justify-content-center gap-3">
+              <a class="btn btn-green btn-lg" href="pago.html">Comprar Tónico</a>
+</div>
+
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="p-4 product-card bg-white text-dark rounded h-100">
+            <h5 class="fw-bold">Ritual</h5>
+            <p class="small text-muted">Patch + Balance - Sistema de cuidado estructural.</p>
+            <a class="btn btn-green btn-lg" href="pago.html">Comprar Bundle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center small">
+    <div class="container py-4">
+      <div class="d-flex justify-content-center align-items-center mb-3 footer-brand">
+        <img src="logo2.png" alt="Celyra" style="height:56px;filter:brightness(0.95)">
+      </div>
+      <div class="text-muted">Celyra © 2026 ·  Ciencia estructural para la piel</div>
+      <div class="text-muted">celyra.skin@gmail - ig: celyra.skin</div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    // Simple reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    },{threshold:0.12});
+    reveals.forEach(r => observer.observe(r));
+
+    // Before/After simple handler (draggable)
+    (function(){
+      const wrap = document.querySelector('.ba-wrap');
+      if(!wrap) return;
+      const after = wrap.querySelector('.ba-after');
+      const handle = wrap.querySelector('.ba-handle');
+      let dragging = false;
+      function setPos(x){
+        const rect = wrap.getBoundingClientRect();
+        let pct = (x - rect.left) / rect.width;
+        pct = Math.max(0, Math.min(1,pct));
+        after.style.width = (pct*100) + '%';
+        handle.style.left = (pct*100) + '%';
+      }
+      wrap.addEventListener('pointerdown', e=>{dragging=true; setPos(e.clientX)});
+      window.addEventListener('pointermove', e=>{ if(dragging) setPos(e.clientX)});
+      window.addEventListener('pointerup', ()=>dragging=false);
+      // initial
+      after.style.width = '50%';
+      handle.style.left = '50%';
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+const stripe = Stripe("pk_test_xxxxxxxxxxxxxxxxxxx");
+
+function pagarHoja(){
+  stripe.redirectToCheckout({
+    lineItems: [{ price: "price_hoja_123", quantity: 1 }],
+    mode: "payment",
+    successUrl: window.location.origin + "/gracias.html",
+    cancelUrl: window.location.origin + "#comprar",
+  });
+}
+
+function pagarTonico(){
+  stripe.redirectToCheckout({
+    lineItems: [{ price: "price_tonico_123", quantity: 1 }],
+    mode: "payment",
+    successUrl: window.location.origin + "/gracias.html",
+    cancelUrl: window.location.origin + "#comprar",
+  });
+}
+
+function pagarBundle(){
+  stripe.redirectToCheckout({
+    lineItems: [{ price: "price_bundle_123", quantity: 1 }],
+    mode: "payment",
+    successUrl: window.location.origin + "/gracias.html",
+    cancelUrl: window.location.origin + "#comprar",
+  });
+}
+</script>
+</body>
+</html>

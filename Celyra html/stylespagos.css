@@ -1,0 +1,64 @@
+:root {
+  --celyra-green: #c2d8b9;
+  --celyra-green-deep: #9fbf9a;
+  --celyra-green-soft: rgba(159,191,154,0.18);
+  --celyra-cream: #fffcf7;
+  --celyra-text-dark: #2E3238;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(180deg,var(--celyra-cream), rgba(159,191,154,0.15));
+  color: var(--celyra-text-dark);
+  padding: 30px 12px;
+}
+
+.container-box {
+  max-width: 760px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, rgba(159,191,154,0.16), rgba(194,216,185,0.35));
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 12px 40px rgba(16,24,32,0.08);
+}
+
+h2, h4, h5 {
+  font-weight: 700;
+}
+
+.product-select button {
+  border: 2px solid var(--celyra-green-deep);
+  background: var(--celyra-green-soft);
+  border-radius: 16px;
+  padding: 14px 0;
+  width: 32%;
+  font-weight: 700;
+}
+
+.product-select button.active {
+  background: var(--celyra-green-deep);
+  color: var(--celyra-cream);
+}
+
+.form-control {
+  border-radius: 12px;
+  background: rgba(255,255,255,0.65);
+}
+
+.btn-main {
+  background: var(--celyra-green-deep);
+  border: none;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 14px;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.note {
+  font-size: 11px;
+  color: #586066;
+  margin-top: 20px;
+  text-align: center;
+}

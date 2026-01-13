@@ -1,0 +1,210 @@
+:root {
+  --celyra-green: #c2d8b9;
+  --celyra-green-deep: #9fbf9a;
+  --celyra-cream: #fffcf7;
+  --celyra-blue-light: #A1B5D8;
+  --celyra-blue-dark: #738290;
+  --celyra-text-dark: #2E3238;
+  --celyra-text-light: #fffcf7;
+  --card-radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--celyra-cream) 0%,
+    rgba(194, 216, 185, 0.15) 100%
+  );
+  color: var(--celyra-text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =====================
+   NAV
+===================== */
+.navbar {
+  background-color: transparent !important;
+  backdrop-filter: blur(6px);
+}
+
+.navbar-brand img {
+  height: 200px;
+  margin-left: -10px;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  padding: 5.5rem 0;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(159, 191, 154, 0.08) 0%,
+    rgba(161, 181, 216, 0.03) 100%
+  );
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.hero .logo-big {
+  height: 280px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #586066;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn-green {
+  background-color: var(--celyra-green-deep) !important;
+  border-color: var(--celyra-green-deep) !important;
+  color: var(--celyra-text-dark) !important;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(110, 140, 100, 0.12);
+  border-radius: 12px;
+  padding: 0.7rem 1.2rem;
+}
+
+.btn-green-outline {
+  color: var(--celyra-green-deep) !important;
+  border-color: var(--celyra-green-deep) !important;
+  background: transparent !important;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+}
+
+/* =====================
+   CARDS
+===================== */
+.product-card {
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 30px rgba(16, 24, 32, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(16, 24, 32, 0.08);
+}
+
+.product-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start; /* 🔑 CLAVE */
+}
+.product-images img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+  transform-origin: top center; /* 🔑 */
+}
+
+
+
+/* =====================
+   PRODUCT TEXT SYSTEM
+===================== */
+
+.product h1,
+.product h2 {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 1rem;
+}
+
+.product p {
+  color: #586066;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.product ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.product li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+
+/* =====================
+   TESTIMONIALS
+===================== */
+.quote {
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* =====================
+   HOW TO
+===================== */
+.steps .step {
+  border-left: 4px solid var(--celyra-green-deep);
+  padding-left: 1rem;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: var(--celyra-green);
+  color: var(--celyra-text-light);
+  padding: 3rem 0;
+}
+
+.footer-brand img {
+  height: 56px;
+}
+
+/* =====================
+   REVEAL ANIMATIONS
+===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 767px) {
+  .hero {
+    padding: 3.2rem 1rem;
+  }
+
+  .hero .logo-big {
+    height: 64px;
+  }
+
+  .placeholder-img {
+    height: 220px;
+  }
+}
