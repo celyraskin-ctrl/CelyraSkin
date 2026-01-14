@@ -88,6 +88,13 @@ a {
   color: var(--celyra-text-dark) !important;
 }
 
+input,
+textarea,
+select {
+  -webkit-text-fill-color: #2E3238;
+}
+
+
 
 @media (max-width: 767px) {
   .hero-description {
@@ -96,6 +103,7 @@ a {
     padding: 0 1rem;
   }
 }
+
 
 
 
