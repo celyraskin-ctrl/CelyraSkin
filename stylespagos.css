@@ -62,3 +62,13 @@ h2, h4, h5 {
   margin-top: 20px;
   text-align: center;
 }
+
+@media (max-width: 767px) {
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 0 1rem;
+  }
+}
+
+
