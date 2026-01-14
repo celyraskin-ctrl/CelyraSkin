@@ -63,6 +63,32 @@ h2, h4, h5 {
   text-align: center;
 }
 
+/* Quitar azul de selección en móvil */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Color de texto al seleccionar */
+::selection {
+  background: rgba(159, 191, 154, 0.4); /* verde suave Celyra */
+  color: #2E3238;
+}
+
+::-moz-selection {
+  background: rgba(159, 191, 154, 0.4);
+  color: #2E3238;
+}
+button,
+a {
+  -webkit-appearance: none;
+  appearance: none;
+  color: inherit;
+}
+.btn-pay {
+  color: var(--celyra-text-dark) !important;
+}
+
+
 @media (max-width: 767px) {
   .hero-description {
     font-size: 0.9rem;
@@ -70,5 +96,6 @@ h2, h4, h5 {
     padding: 0 1rem;
   }
 }
+
 
 
