@@ -69,10 +69,12 @@ body {
   letter-spacing: 0.2px;
 }
 
-.hero p {
-  max-width: 760px;
+.hero-description {
+  font-size: 0.88rem;      /* aquí está la magia */
+  line-height: 1.65;
+  color: #6b7280;
+  max-width: 680px;
   margin: 0 auto;
-  color: #586066;
 }
 
 /* =====================
@@ -215,4 +217,5 @@ footer {
     height: 220px;
   }
 }
+
 
