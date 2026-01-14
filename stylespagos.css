@@ -33,7 +33,24 @@ h2, h4, h5 {
   padding: 14px 0;
   width: 32%;
   font-weight: 700;
+
+  /* 🔑 CLAVE */
+  color: var(--celyra-text-dark);
 }
+.product-select button:hover,
+.product-select button:focus,
+.product-select button:active {
+  color: var(--celyra-text-dark);
+  outline: none;
+}
+.product-select button {
+  -webkit-text-fill-color: var(--celyra-text-dark);
+}
+
+.product-select button.active {
+  -webkit-text-fill-color: var(--celyra-cream);
+}
+
 
 .product-select button.active {
   background: var(--celyra-green-deep);
@@ -103,6 +120,7 @@ select {
     padding: 0 1rem;
   }
 }
+
 
 
 
