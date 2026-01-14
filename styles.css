@@ -205,18 +205,35 @@ footer {
    RESPONSIVE
 ===================== */
 @media (max-width: 767px) {
-  .hero {
-    padding: 3.2rem 1rem;
+
+  /* HERO TEXT */
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 0 1rem;
   }
 
-  .hero .logo-big {
-    height: 64px;
+  /* PRODUCT LAYOUT */
+  .product {
+    grid-template-columns: 1fr; /* se apilan */
+    gap: 2rem;
+    text-align: center;
   }
 
-  .placeholder-img {
-    height: 220px;
+  /* PRODUCT IMAGES */
+  .product-images {
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    gap: 1rem;
   }
+
+  .product-images img {
+    height: 200px;        /* controla el tamaño */
+    object-fit: cover;
+  }
+
 }
+
+
 
 
 
