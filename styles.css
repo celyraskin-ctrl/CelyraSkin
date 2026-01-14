@@ -23,6 +23,13 @@ body {
   color: var(--celyra-text-dark);
   -webkit-font-smoothing: antialiased;
 }
+.text-soft {
+  font-size: 0.95rem;   /* prueba entre 0.9–1rem */
+  line-height: 1.6;
+  color: #586066;
+  max-width: 720px;
+}
+
 
 /* =====================
    NAV
@@ -208,3 +215,4 @@ footer {
     height: 220px;
   }
 }
+
