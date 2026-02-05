@@ -107,36 +107,14 @@ h2, h4, h5 {
 /* =========================
    TEXTO LEGAL / INFORMATIVO
 ========================= */
+/* Texto informativo */
 .info-block {
-  max-width: 520px;
-
-  /* 🔑 SEPARA DEL BOTÓN */
-  margin: 48px auto 0;
-
-  /* 🔑 TEXTO MÁS PEQUEÑO */
-  font-size: 11px;
-  line-height: 1.65;
-
-  text-align: center;
+  font-size: 10.5px;      /* más chico, elegante */
+  line-height: 1.6;
+  text-align: justify;    /* texto justificado */
   color: #586066;
 }
 
-/* Títulos dentro del texto legal */
-.info-block strong {
-  display: block;
-  margin-bottom: 4px;
-
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--celyra-text-dark);
-}
-
-/* Aviso de privacidad más discreto */
-.info-block .legal {
-  font-size: 10.5px;
-  opacity: 0.6;
-  margin-top: 16px;
-}
 
 /* =========================
    UX EXTRAS
@@ -175,6 +153,7 @@ a {
     padding: 0 1rem;
   }
 }
+
 
 
 
