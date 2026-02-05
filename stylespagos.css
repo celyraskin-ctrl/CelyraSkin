@@ -107,12 +107,12 @@ h2, h4, h5 {
 /* =========================
    TEXTO LEGAL / INFORMATIVO
 ========================= */
-/* Texto informativo */
-.info-block {
-  font-size: 10.5px;      /* más chico, elegante */
+.info-block p {
+  font-size: 10.5px;      /* texto más chico */
   line-height: 1.6;
   text-align: justify;    /* texto justificado */
   color: #586066;
+  margin-bottom: 12px;    /* separa párrafos */
 }
 
 
@@ -153,6 +153,7 @@ a {
     padding: 0 1rem;
   }
 }
+
 
 
 
