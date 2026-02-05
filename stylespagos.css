@@ -115,22 +115,23 @@ h2, h4, h5 {
 /* Subtítulos */
 .info-block strong {
   display: block;
-  margin: 0 0 4px 0;   /* 🔑 casi pegado al texto */
-  font-size: 12px;
+  margin: 0 0 4px 0;
+  font-size: 11px;
   font-weight: 600;
-  text-align: justify;
   letter-spacing: 0.04em;
+  text-align: justify; /* 🔑 YA NO centrado */
   color: var(--celyra-text-dark);
 }
 
 /* Párrafos */
 .info-block p {
-  margin: 0 0 12px 0;  /* 🔑 elimina espacio arriba */
+  margin: 0 0 12px 0;
   font-size: 10.5px;
   line-height: 1.6;
-  text-align: justify;
+  text-align: justify; /* 🔑 todo justificado */
   color: #586066;
 }
+
 
 
 /* =========================
@@ -170,6 +171,7 @@ a {
     padding: 0 1rem;
   }
 }
+
 
 
 
