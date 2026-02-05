@@ -1,3 +1,7 @@
+/* =========================
+   VARIABLES DE MARCA
+   Colores base Celyra
+========================= */
 :root {
   --celyra-green: #c2d8b9;
   --celyra-green-deep: #9fbf9a;
@@ -6,120 +10,99 @@
   --celyra-text-dark: #2E3238;
 }
 
+/* =========================
+   ESTILOS GENERALES
+========================= */
 body {
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(180deg,var(--celyra-cream), rgba(159,191,154,0.15));
+  background: linear-gradient(
+    180deg,
+    var(--celyra-cream),
+    rgba(159,191,154,0.15)
+  );
   color: var(--celyra-text-dark);
   padding: 30px 12px;
 }
 
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
 .container-box {
   max-width: 760px;
   margin: 40px auto;
-  background: linear-gradient(135deg, rgba(159,191,154,0.16), rgba(194,216,185,0.35));
   padding: 40px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(159,191,154,0.16),
+    rgba(194,216,185,0.35)
+  );
+
   border-radius: 28px;
   box-shadow: 0 12px 40px rgba(16,24,32,0.08);
 }
 
-h2, h4, h5 {
+/* =========================
+   TÍTULOS
+========================= */
+h2,
+h4,
+h5 {
   font-weight: 700;
 }
 
+/* =========================
+   BOTONES DE SELECCIÓN
+   (productos / opciones)
+========================= */
 .product-select button {
+  width: 32%;
+  padding: 14px 0;
+
+  border-radius: 16px;
   border: 2px solid var(--celyra-green-deep);
   background: var(--celyra-green-soft);
-  border-radius: 16px;
-  padding: 14px 0;
-  width: 32%;
-  font-weight: 700;
 
-  /* 🔑 CLAVE */
+  font-weight: 700;
   color: var(--celyra-text-dark);
+
+  appearance: none;
+  cursor: pointer;
 }
+
+/* Estado hover / focus */
 .product-select button:hover,
-.product-select button:focus,
-.product-select button:active {
-  color: var(--celyra-text-dark);
+.product-select button:focus {
   outline: none;
 }
-.product-select button {
-  -webkit-text-fill-color: var(--celyra-text-dark);
-}
 
-.product-select button.active {
-  -webkit-text-fill-color: var(--celyra-cream);
-}
-
-
+/* Estado activo */
 .product-select button.active {
   background: var(--celyra-green-deep);
   color: var(--celyra-cream);
 }
 
+/* =========================
+   INPUTS Y FORMULARIOS
+========================= */
 .form-control {
   border-radius: 12px;
   background: rgba(255,255,255,0.65);
+  color: var(--celyra-text-dark);
 }
 
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
 .btn-main {
-  background: var(--celyra-green-deep);
-  border: none;
-  font-weight: 700;
-  padding: 15px;
-  border-radius: 14px;
   width: 100%;
-  font-size: 18px;
   margin-top: 20px;
-}
+  padding: 15px;
 
-.note {
-  font-size: 11px;
-  color: #586066;
-  margin-top: 20px;
-  text-align: center;
-}
+  border-radius: 14px;
+  border: none;
 
-/* Quitar azul de selección en móvil */
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* Color de texto al seleccionar */
-::selection {
-  background: rgba(159, 191, 154, 0.4); /* verde suave Celyra */
-  color: #2E3238;
-}
-
-::-moz-selection {
-  background: rgba(159, 191, 154, 0.4);
-  color: #2E3238;
-}
-button,
-a {
-  -webkit-appearance: none;
-  appearance: none;
-  color: inherit;
-}
-.btn-pay {
-  color: var(--celyra-text-dark) !important;
-}
-
-input,
-textarea,
-select {
-  -webkit-text-fill-color: #2E3238;
-}
-
-
-
-@media (max-width: 767px) {
-  .hero-description {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    padding: 0 1rem;
-  }
-}
+  bac
 
 
 
